@@ -11,7 +11,7 @@ $$d(\log|x - 5|)) = \frac{dx}{|x - 5|}.$$
 
 The conditioning is 
 
-$$\kappa(x) = \frac{d(\log f)}{d(\log x)} = \frac{dx}{|x-5|} \frac{|x|}{dx} = \frac{|x|}{|x-5|}$$
+$$\kappa(x) = \frac{d(\log f)}{d(\log x)} = \frac{dx}{|x-5|} \cdot \frac{|x|}{dx} = \frac{|x|}{|x-5|}$$
 
 $$\frac{|x|}{|x-5|} \to \infty \text{ as } x \to 5.$$
 
