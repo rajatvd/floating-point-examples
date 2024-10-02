@@ -20,6 +20,7 @@
 import numpy as np
 import matplotlib.pyplot as plt
 
+# %%
 VALUE = 5
 
 
@@ -38,8 +39,11 @@ def identity_mult(x):
     return (x * VALUE) / VALUE
 
 
-# %% [markdown]
-# # Using 32-bit floats
+# %% [markdown] jp-MarkdownHeadingCollapsed=true
+# # Compare Relative Errors
+
+# %% [markdown] jp-MarkdownHeadingCollapsed=true
+# ## Using 32-bit floats
 
 # %%
 count = 100000
@@ -59,11 +63,12 @@ plt.xlabel("x")
 plt.title("Relative error between f(x) and x, 32-bit floating point")
 plt.plot(xs, sub_error, label=f"f(x) = (x + {VALUE}) - {VALUE}")
 plt.plot(xs, mult_error, label=f"f(x) = (x * {VALUE}) / {VALUE}")
+plt.ylabel("|f(x) - x| / |x|")
 plt.legend()
 plt.show()
 
-# %% [markdown]
-# # Using 64-bit floats
+# %% [markdown] jp-MarkdownHeadingCollapsed=true
+# ## Using 64-bit floats
 
 # %%
 xs = np.logspace(-17, 17, count, dtype=np.float64)
@@ -82,5 +87,14 @@ plt.xlabel("x")
 plt.title("Relative error between f(x) and x, 64-bit floating point")
 plt.plot(xs, sub_error, label=f"f(x) = (x + {VALUE}) - {VALUE}")
 plt.plot(xs, mult_error, label=f"f(x) = (x * {VALUE}) / {VALUE}")
+plt.ylabel("|f(x) - x| / |x|")
 plt.legend()
 plt.show()
+
+# %%
+plt.loglog()
+plt.plot(xs, ys)
+plt.plot(xs, ys_sub)
+plt.plot(xs, ys_mult)
+
+# %%
