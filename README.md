@@ -15,5 +15,5 @@ $$\kappa_f (x) = \frac{d(\log f)}{d(\log x)} = \frac{dx}{|x-5|} \cdot \frac{|x|}
 
 $$\frac{|x|}{|x-5|} \to \infty \text{ as } x \to 5.$$
 
-So, if we try to compute the **identity** function using this $f(x)$, i.e., $\text{id}(x) = f(x+5)$, we will get huge relateive error for $|x| \ll 5$.
+So, if we try to compute the **identity** function using this $f(x)$, i.e., $\text{id}(x) = f(x+5)$, we will get huge relative error for $|x| \ll 5$.
 
